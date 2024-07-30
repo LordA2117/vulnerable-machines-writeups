@@ -8,7 +8,7 @@ Port 3000 contains the repo for greenhorn where the password is found at data/se
 
 # Exploitation
 Use this password in this exploit https://github.com/Rai2en/CVE-2023-50564_Pluck-v4.7.18_PoC
-Once you are in, you can pivot to the junior user using the password iloveyou1 (which is the password we cracked from the hash in pass.php)
+Once you are in, you can pivot to the junior user using the password **iloveyou1** (which is the password we cracked from the hash in pass.php)
 
 # Privilege Escalation
 Now there is a pdf file called 'Using OpenVas.pdf'
@@ -21,6 +21,6 @@ to isolate the pixelated part of the image.
 Use this tool https://github.com/spipm/Depix to depixelate this.
 
 Now the password will be something like
-sidefromsidetheothersidesidefromsidetheotherside
+**sidefromsidetheothersidesidefromsidetheotherside**
 
 Use this to login as root via ssh, or use the su command, your wish.
