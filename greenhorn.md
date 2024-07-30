@@ -1,6 +1,8 @@
 # Enumeration
 Open ports: 22,80,3000 -> found by masscan
 
+The hostname found is greenhorn, which I did by decoding the base64 cookie found during the nmap -sC -sV enumeration
+
 Port 80 runs pluck 4.7.18 which is vulnerable to authenticated RCE via unauthenticated file upload
 Port 3000 contains the repo for greenhorn where the password is found at data/settings/pass.php
 
