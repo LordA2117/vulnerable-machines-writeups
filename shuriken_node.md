@@ -1,3 +1,5 @@
+Website: VulnHub
+
 Open ports 22,8080
 
 Port 8080:
@@ -15,3 +17,5 @@ Port 8080:
   Now the privesc is just **CVE-2021-3156**, from which I used **exploit_nss.py**
   
   Get this exploit from the *linpeas.sh* scan.
+
+Key Takeaway: NodeJS Deserialization.
