@@ -4,13 +4,12 @@
 * [index](index.html)
 * [resource\_htb](resource_htb.md)
 * [greenhorn](greenhorn.md)
-* [blurry\_hackthebox](blurry_hackthebox.txt)
-* [shuriken\_node](shuriken_node.md)
 
 ### 🔐 HackTheBox (HTB)
 
 * [analytics\_htb](analytics_htb.md)
 * [builder\_htb](builder_htb.md)
+* [blurry\_hackthebox](blurry_hackthebox.md)
 * [cypher\_htb](cypher_htb.md)
 * [devvortex\_htb](devvortex_htb.md)
 * [dog\_htb](dog_htb.md)
@@ -42,6 +41,7 @@
 
 * [ica1\_vnb](ica1_vnb.md)
 * [mr\_robot\_vnb](mr_robot_vnb.md)
+* [shuriken\_node](shuriken_node.md)
 
 
 
