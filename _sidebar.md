@@ -1,9 +1,6 @@
 ### 📘 General
 
 * [README](README.md)
-* [index](index.html)
-* [resource\_htb](resource_htb.md)
-* [greenhorn](greenhorn.md)
 
 ### 🔐 HackTheBox (HTB)
 
@@ -20,6 +17,8 @@
 * [planning\_htb](planning_htb.md)
 * [surveillance\_htb](surveillance_htb.md)
 * [wifinetic\_2\_htb](wifinetic_2_htb.md)
+* [resource\_htb](resource_htb.md)
+* [greenhorn](greenhorn.md)
 
 ### 🧪 HackMyVM (HMV)
 
