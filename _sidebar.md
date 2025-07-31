@@ -19,6 +19,7 @@
 * [wifinetic\_2\_htb](wifinetic_2_htb.md)
 * [resource\_htb](resource_htb.md)
 * [greenhorn](greenhorn.md)
+* [era](era_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
