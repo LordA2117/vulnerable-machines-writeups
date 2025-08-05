@@ -22,7 +22,7 @@ After this it was time to check around for CVEs. The version this was running wa
 
 ## Initial Access
 
-Use this exploit after setting the appropriate parameters to gain a shell. Since my friend was having some problems with this exploit (we ewwere doing this together) I'll explain how to use this.
+Use this exploit after setting the appropriate parameters to gain a shell. Since my friend was having some problems with this exploit (we were doing this together) I'll explain how to use this.
 
 1. Start a netcat listener on port 31337
 2. Now, in the PoC we have to change a few settings. Change the target host to `wiki.editor.htb`, and change the local host to your HTB vpn IP.
