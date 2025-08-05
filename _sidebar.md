@@ -21,7 +21,7 @@
 * [greenhorn](greenhorn.md)
 * [era](era_htb.md)
 * [Ambassador CTF](ambassador_ctf_htb.md)
-* [editor](editor_htb.md)
+* [editor\_htb](editor_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
