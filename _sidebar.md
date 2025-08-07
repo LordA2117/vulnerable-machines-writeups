@@ -38,6 +38,7 @@
 * [savesanta\_hmv](savesanta_hmv.md)
 * [vivifytech\_hmv](vivifytech_hmv.md)
 * [whitedoor\_hvm](whitedoor_hvm.md)
+* [console\_hmv](console_hmv.md)
 
 ### 🧩 VulnHub / Other
 
