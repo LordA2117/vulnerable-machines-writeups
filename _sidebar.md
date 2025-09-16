@@ -24,6 +24,7 @@
 * [editor\_htb](editor_htb.md)
 * [previous\_htb](previous_htb.md)
 * [codetwo\_htb](codetwo_htb.md)
+* [soulmate\_htb](soulmate_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
