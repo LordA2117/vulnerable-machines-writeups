@@ -25,6 +25,7 @@
 * [previous\_htb](previous_htb.md)
 * [codetwo\_htb](codetwo_htb.md)
 * [soulmate\_htb](soulmate_htb.md)
+* [expressway\_htb](expressway_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
