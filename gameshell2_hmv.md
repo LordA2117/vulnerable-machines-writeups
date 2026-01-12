@@ -152,7 +152,7 @@ drwxr-xr-x  4 dt   dt    4096 Nov 21 03:01 .venv
 - Since we can't cd into the directory to run it we have to run everything by typing in it's absolute path. However, on trying to run phpsploit, we will run into a missing packages error. So follow the given commands:
 
 ```bash
-source phpsploit/.venv/activate
+source phpsploit/.venv/bin/activate
 pip3 install -r phpsploit/requirements.txt
 phpsploit/phpsploit
 ```
