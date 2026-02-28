@@ -30,6 +30,7 @@
 * [conversor\_htb](conversor_htb.md)
 * [bamboo\_htb](bamboo_htb.md)
 * [monitorsfour\_htb](monitorsfour_htb.md)
+* [facts\_htb](facts_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
