@@ -31,6 +31,7 @@
 * [bamboo\_htb](bamboo_htb.md)
 * [monitorsfour\_htb](monitorsfour_htb.md)
 * [facts\_htb](facts_htb.md)
+* [wingdata\_htb](wingdata_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
