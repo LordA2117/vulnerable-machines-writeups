@@ -62,4 +62,6 @@
 * [shuriken\_node](shuriken_node.md)
 
 
+### 🚩 CTF Writeups
 
+* [UMASS CTF 2026](umass_ctf_2026.md)
