@@ -63,5 +63,3 @@
 
 
 ### 🚩 CTF Writeups
-
-* [UMASS CTF 2026](umass_ctf_2026.md)
