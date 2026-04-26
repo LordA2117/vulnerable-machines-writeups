@@ -33,6 +33,7 @@
 * [facts\_htb](facts_htb.md)
 * [wingdata\_htb](wingdata_htb.md)
 * [kobold\_htb](kobold_htb.md)
+* [silentium\_htb](silentium_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
