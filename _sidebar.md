@@ -35,6 +35,7 @@
 * [kobold\_htb](kobold_htb.md)
 * [silentium\_htb](silentium_htb.md)
 * [devarea\_htb](devarea_htb.md)
+* [pterodactyl\_htb](pterodactyl_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
