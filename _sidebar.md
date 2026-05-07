@@ -36,6 +36,7 @@
 * [silentium\_htb](silentium_htb.md)
 * [devarea\_htb](devarea_htb.md)
 * [pterodactyl\_htb](pterodactyl_htb.md)
+* [cctv\_htb](cctv_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
