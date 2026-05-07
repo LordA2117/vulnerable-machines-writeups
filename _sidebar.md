@@ -57,6 +57,7 @@
 * [realsaga\_hmv](realsaga_hmv.md)
 * [react\_hmv](react_hmv.md)
 * [meltdown\_hmv](meltdown_hmv.md)
+* [calc\_hmv](calc_hmv.md)
 
 ### 🧩 VulnHub / Other
 
