@@ -21,6 +21,17 @@
   <div id="app"></div>
 
   <script>
+
+		function getGiscusTerm() {
+			const hash = window.location.hash;
+
+			if (!hash || hash === "#/" || hash === "") {
+				return "home";
+			}
+
+			return hash.replace("#/", "").split("?")[0];
+		}
+	
     window.$docsify = {
       name: '',
       repo: '',
@@ -33,9 +44,9 @@
 				repoId: "R_kgDOMN9P_Q",
 				category: "Announcements",
 				categoryId: "DIC_kwDOMN9P_c4C9AZV",
-				mapping: "pathname",
+				mapping: "specific",
 				reactionsEnabled: "1",
-				strict: "0",
+				strict: "1",
 				emitMetadata: "0",
 				inputPosition: "bottom",
 				theme: "dark",
@@ -43,6 +54,46 @@
 				loading: "lazy"
 			},
     }
+
+		window.$docsify.plugins = [].concat(function (hook) {
+
+			hook.doneEach(function () {
+
+				const container = document.querySelector(".giscus");
+				if (!container) return;
+
+				container.innerHTML = "";
+
+				const hash = window.location.hash;
+
+				let term = "home";
+				if (hash && hash !== "#/") {
+					term = hash.replace("#/", "").split("?")[0];
+				}
+
+				const script = document.createElement("script");
+				script.src = "https://giscus.app/client.js";
+
+				script.setAttribute("data-repo", "LordA2117/vulnerable-machines-writeups");
+				script.setAttribute("data-repo-id", "R_kgDOMN9P_Q");
+				script.setAttribute("data-category", "Announcements");
+				script.setAttribute("data-category-id", "DIC_kwDOMN9P_c4C9AZV");
+
+				script.setAttribute("data-mapping", "specific");
+				script.setAttribute("data-term", term);
+
+				script.setAttribute("data-strict", "1");
+				script.setAttribute("data-reactions-enabled", "1");
+				script.setAttribute("data-input-position", "bottom");
+				script.setAttribute("data-theme", "dark");
+				script.setAttribute("data-lang", "en");
+
+				script.async = true;
+
+				container.appendChild(script);
+			});
+
+		});
   </script>
 
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
