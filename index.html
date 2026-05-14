@@ -21,17 +21,6 @@
   <div id="app"></div>
 
   <script>
-
-		function getGiscusTerm() {
-			const hash = window.location.hash;
-
-			if (!hash || hash === "#/" || hash === "") {
-				return "home";
-			}
-
-			return hash.replace("#/", "").split("?")[0];
-		}
-	
     window.$docsify = {
       name: '',
       repo: '',
@@ -57,19 +46,28 @@
 
 		window.$docsify.plugins = [].concat(function (hook) {
 
-			hook.doneEach(function () {
+			function getTerm(vm) {
+				let route = vm?.route?.path || window.location.hash || "#/";
+
+				route = route
+					.replace(/^#\//, "")
+					.replace(/^\/+/, "")
+					.split("?")[0];
+
+				// Fix Docsify edge cases
+				if (!route || route === "/" || route === "README") {
+					return "home";
+				}
+
+				return route;
+			}
+
+			hook.doneEach(function (vm) {
 
 				const container = document.querySelector(".giscus");
 				if (!container) return;
 
 				container.innerHTML = "";
-
-				const hash = window.location.hash;
-
-				let term = "home";
-				if (hash && hash !== "#/") {
-					term = hash.replace("#/", "").split("?")[0];
-				}
 
 				const script = document.createElement("script");
 				script.src = "https://giscus.app/client.js";
@@ -80,20 +78,22 @@
 				script.setAttribute("data-category-id", "DIC_kwDOMN9P_c4C9AZV");
 
 				script.setAttribute("data-mapping", "specific");
-				script.setAttribute("data-term", term);
+				script.setAttribute("data-term", getTerm(vm));
 
 				script.setAttribute("data-strict", "1");
 				script.setAttribute("data-reactions-enabled", "1");
+				script.setAttribute("data-emit-metadata", "0");
 				script.setAttribute("data-input-position", "bottom");
 				script.setAttribute("data-theme", "dark");
 				script.setAttribute("data-lang", "en");
 
+				script.setAttribute("crossorigin", "anonymous");
 				script.async = true;
 
 				container.appendChild(script);
 			});
 
-		});
+		});	
   </script>
 
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
