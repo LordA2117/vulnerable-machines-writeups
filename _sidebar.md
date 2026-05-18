@@ -38,6 +38,7 @@
 * [pterodactyl\_htb](pterodactyl_htb.md)
 * [cctv\_htb](cctv_htb.md)
 * [helix\_htb](helix_htb.md)
+* [smarthire\_htb](smarthire_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
