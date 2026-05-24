@@ -39,6 +39,7 @@
 * [cctv\_htb](cctv_htb.md)
 * [helix\_htb](helix_htb.md)
 * [smarthire\_htb](smarthire_htb.md)
+* [reactor\_htb](reactor_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
