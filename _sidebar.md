@@ -41,6 +41,7 @@
 * [smarthire\_htb](smarthire_htb.md)
 * [reactor\_htb](reactor_htb.md)
 * [Web - Secure Notes](web_secure_notes.md)
+* [devhub\_htb](devhub_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
