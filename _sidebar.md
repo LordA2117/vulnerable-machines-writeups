@@ -1,6 +1,9 @@
+* [**BLOGS**](https://blogs.bobbysmiles.xyz/)
+
 ### 📘 General
 
 * [README](README.md)
+
 
 ### 🔐 HackTheBox (HTB)
 
