@@ -45,6 +45,7 @@
 * [reactor\_htb](reactor_htb.md)
 * [Web - Secure Notes](web_secure_notes.md)
 * [devhub\_htb](devhub_htb.md)
+* [principal\_htb](principal_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
