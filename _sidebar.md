@@ -50,6 +50,7 @@
 * [devhub\_htb](devhub_htb.md)
 * [principal\_htb](principal_htb.md)
 * [enigma\_htb](enigma_htb.md)
+* [paperwork\_htb](paperwork_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
