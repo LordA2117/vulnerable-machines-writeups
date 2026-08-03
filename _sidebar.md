@@ -51,7 +51,7 @@
 * [principal\_htb](principal_htb.md)
 * [enigma\_htb](enigma_htb.md)
 * [paperwork\_htb](paperwork_htb.md)
-* [cohort\_htb](codetwo_htb.md)
+* [cohort\_htb](cohort_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
