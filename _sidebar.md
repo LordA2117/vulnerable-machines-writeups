@@ -52,6 +52,7 @@
 * [enigma\_htb](enigma_htb.md)
 * [paperwork\_htb](paperwork_htb.md)
 * [cohort\_htb](cohort_htb.md)
+* [bedside\_htb](bedside_htb.md)
 
 ### 🧪 HackMyVM (HMV)
 
