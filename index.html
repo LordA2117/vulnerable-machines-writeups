@@ -18,8 +18,22 @@
 	<link rel="stylesheet" href="https://unpkg.com/docsify-giscus@1.0.0/dist/giscus.css">
 	<script data-goatcounter="https://writeups-lorda2117.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+	<style>
+		/* Progress Bar */
+		#reading-progress {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 3px;
+			background: var(--theme-color, #42b983);
+			z-index: 99999;
+			pointer-events: none;
+		}
+	</style>
 </head>
 <body>
+	<div id="reading-progress"></div>
   <div id="app"></div>
 
   <script>
@@ -45,7 +59,6 @@
 				lang: "en",
 				loading: "lazy"
 			},
-			// plugins
     }
 
 		window.$docsify.plugins = [].concat(function (hook) {
@@ -125,6 +138,38 @@
 	<!-- footer -->
 	<script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
 
+	<!-- Progress Bar -->
+	<script>
+		// Code for the Progress Bar
+		(() => {
+			const bar = document.getElementById('reading-progress');
+
+			function updateProgress() {
+				const scrollTop =
+					window.scrollY || document.documentElement.scrollTop;
+
+				const maxScroll =
+					document.documentElement.scrollHeight - window.innerHeight;
+
+				const progress = maxScroll > 0
+					? Math.min(100, Math.max(0, scrollTop / maxScroll * 100))
+					: 0;
+
+				bar.style.width = progress + '%';
+			}
+
+			window.addEventListener('scroll', updateProgress, { passive: true });
+			window.addEventListener('resize', updateProgress);
+			window.addEventListener('load', updateProgress);
+
+			new MutationObserver(updateProgress).observe(
+				document.getElementById('app'),
+				{ childList: true, subtree: true }
+			);
+
+			updateProgress();
+		})();
+	</script>
 </body>
 </html>
 
