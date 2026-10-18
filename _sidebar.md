@@ -76,6 +76,7 @@
 * [meltdown\_hmv](meltdown_hmv.md)
 * [calc\_hmv](calc_hmv.md)
 * [pulse\_hmv](pulse_hmv.md)
+* [arcane\_hmv](arcane_hmv.md)
 
 ### 🧩 VulnHub / Other
 
