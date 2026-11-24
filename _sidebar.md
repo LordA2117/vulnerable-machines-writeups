@@ -78,6 +78,7 @@
 * [pulse\_hmv](pulse_hmv.md)
 * [arcane\_hmv](arcane_hmv.md)
 * [baby\_hmv](baby_hmv.md)
+* [chinese\_hmv](chinese_hmv.md)
 
 ### 🧩 VulnHub / Other
 
